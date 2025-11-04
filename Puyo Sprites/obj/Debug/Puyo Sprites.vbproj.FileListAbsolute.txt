@@ -1,0 +1,12 @@
+C:\Users\radio\Thomas\Puyo Puyo Translation\Puyo Puyo (English) - RadioTails\notes\Puyo Sprites\Puyo Sprites\Puyo Sprites\bin\Debug\Puyo Sprites.exe.config
+C:\Users\radio\Thomas\Puyo Puyo Translation\Puyo Puyo (English) - RadioTails\notes\Puyo Sprites\Puyo Sprites\Puyo Sprites\bin\Debug\Puyo Sprites.exe
+C:\Users\radio\Thomas\Puyo Puyo Translation\Puyo Puyo (English) - RadioTails\notes\Puyo Sprites\Puyo Sprites\Puyo Sprites\bin\Debug\Puyo Sprites.pdb
+C:\Users\radio\Thomas\Puyo Puyo Translation\Puyo Puyo (English) - RadioTails\notes\Puyo Sprites\Puyo Sprites\Puyo Sprites\bin\Debug\Puyo Sprites.xml
+C:\Users\radio\Thomas\Puyo Puyo Translation\Puyo Puyo (English) - RadioTails\notes\Puyo Sprites\Puyo Sprites\Puyo Sprites\obj\Debug\Puyo Sprites.vbproj.AssemblyReference.cache
+C:\Users\radio\Thomas\Puyo Puyo Translation\Puyo Puyo (English) - RadioTails\notes\Puyo Sprites\Puyo Sprites\Puyo Sprites\obj\Debug\Puyo_Sprites.Resources.resources
+C:\Users\radio\Thomas\Puyo Puyo Translation\Puyo Puyo (English) - RadioTails\notes\Puyo Sprites\Puyo Sprites\Puyo Sprites\obj\Debug\Puyo Sprites.vbproj.GenerateResource.cache
+C:\Users\radio\Thomas\Puyo Puyo Translation\Puyo Puyo (English) - RadioTails\notes\Puyo Sprites\Puyo Sprites\Puyo Sprites\obj\Debug\Puyo Sprites.vbproj.CoreCompileInputs.cache
+C:\Users\radio\Thomas\Puyo Puyo Translation\Puyo Puyo (English) - RadioTails\notes\Puyo Sprites\Puyo Sprites\Puyo Sprites\obj\Debug\Puyo Sprites.exe
+C:\Users\radio\Thomas\Puyo Puyo Translation\Puyo Puyo (English) - RadioTails\notes\Puyo Sprites\Puyo Sprites\Puyo Sprites\obj\Debug\Puyo Sprites.xml
+C:\Users\radio\Thomas\Puyo Puyo Translation\Puyo Puyo (English) - RadioTails\notes\Puyo Sprites\Puyo Sprites\Puyo Sprites\obj\Debug\Puyo Sprites.pdb
+C:\Users\radio\Thomas\Puyo Puyo Translation\Puyo Puyo (English) - RadioTails\notes\Puyo Sprites\Puyo Sprites\Puyo Sprites\obj\Debug\Puyo_Sprites.Main_Form.resources
