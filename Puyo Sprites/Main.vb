@@ -169,20 +169,20 @@
                         Else
                             Vert_Pos = Attribute_Section(1)
                             Vert_Pos = Vert_Pos And &B11111111
-                            Vert_Pos = &HFF - Vert_Pos
+                            Vert_Pos = &HFF - Vert_Pos + 1
                             Vert_Pos_Text = "-" & Vert_Pos
                         End If
 
                         Hori_Pos_Neg = Attribute_Section(1) And &B1111111100000000
                         If Hori_Pos_Neg = 0 Then
                             Hori_Pos = Attribute_Section(1)
-                            Hori_Pos = Vert_Pos And &B11111111
-                            Hori_Pos_Text = Vert_Pos
+                            Hori_Pos = Hori_Pos And &B11111111
+                            Hori_Pos_Text = Hori_Pos
                         Else
                             Hori_Pos = Attribute_Section(1)
-                            Hori_Pos = Vert_Pos And &B11111111
-                            Hori_Pos = &HFF - Vert_Pos
-                            Hori_Pos_Text = "-" & Vert_Pos
+                            Hori_Pos = Hori_Pos And &B11111111
+                            Hori_Pos = &HFF - Hori_Pos + 1
+                            Hori_Pos_Text = "-" & Hori_Pos
                         End If
 
                         Hori_Size = Attribute_Section(2)
