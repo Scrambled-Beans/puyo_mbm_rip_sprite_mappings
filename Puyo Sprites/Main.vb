@@ -21,6 +21,11 @@
 
     Public Hori_Pos As UShort
     Public Vert_Pos As UShort
+    Public Hori_Pos_Neg As UShort
+    Public Vert_Pos_Neg As UShort
+    Public Hori_Pos_Text As String
+    Public Vert_Pos_Text As String
+
     Public Hori_Size As UShort
     Public Vert_Size As UShort
     Public Link_ID As UShort
@@ -29,6 +34,8 @@
     Public Hori_Rev As UShort
     Public Vert_Rev As UShort
     Public Tile_ID As UShort
+
+
 
     Private Sub File_Open_Click(sender As Object, e As EventArgs) Handles File_Open.Click
         If Open_File.ShowDialog <> DialogResult.Cancel Then ' Opens dialogue box | Exit code if Cancel is pressed
@@ -154,11 +161,29 @@
                         Attribute_Section(4) = Word_Byte_Full
 
 
-                        Vert_Pos = Attribute_Section(1)
-                        Vert_Pos = Vert_Pos And &B11111111
+                        Vert_Pos_Neg = Attribute_Section(1) And &B1111111100000000
+                        If Vert_Pos_Neg = 0 Then
+                            Vert_Pos = Attribute_Section(1)
+                            Vert_Pos = Vert_Pos And &B11111111
+                            Vert_Pos_Text = Vert_Pos
+                        Else
+                            Vert_Pos = Attribute_Section(1)
+                            Vert_Pos = Vert_Pos And &B11111111
+                            Vert_Pos = &HFF - Vert_Pos
+                            Vert_Pos_Text = "-" & Vert_Pos
+                        End If
 
-                        Hori_Pos = Attribute_Section(4)
-                        Hori_Pos = Hori_Pos And &B11111111
+                        Hori_Pos_Neg = Attribute_Section(1) And &B1111111100000000
+                        If Hori_Pos_Neg = 0 Then
+                            Hori_Pos = Attribute_Section(1)
+                            Hori_Pos = Vert_Pos And &B11111111
+                            Hori_Pos_Text = Vert_Pos
+                        Else
+                            Hori_Pos = Attribute_Section(1)
+                            Hori_Pos = Vert_Pos And &B11111111
+                            Hori_Pos = &HFF - Vert_Pos
+                            Hori_Pos_Text = "-" & Vert_Pos
+                        End If
 
                         Hori_Size = Attribute_Section(2)
                         Hori_Size = Hori_Size And &B110000000000
@@ -195,8 +220,8 @@
 
                         Text_Output.Text +=
                             vbTab & "spritePiece " &
-                            Hori_Pos & ", " &
-                            Vert_Pos & ", " &
+                            Hori_Pos_Text & ", " &
+                            Vert_Pos_Text & ", " &
                             Hori_Size & ", " &
                             Vert_Size & ", " &
                             "$" & Hex(Tile_ID) & ", " &
@@ -236,7 +261,7 @@
 
     Private Sub About_Tool_Click(sender As Object, e As EventArgs) Handles About_Tool.Click
 
-        MessageBox.Show("Puyo Puyo 1 / Mean Bean Machine - Extract Sprite Mappings (V1.0)" & vbNewLine & "by RadioTails", "About")
+        MessageBox.Show("Puyo Puyo 1 / Mean Bean Machine - Extract Sprite Mappings (V1.1)" & vbNewLine & "by RadioTails", "About")
 
     End Sub
 

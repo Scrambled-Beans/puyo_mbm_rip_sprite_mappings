@@ -46,7 +46,7 @@ Partial Class Main_Form
         Me.Menu_Strip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.File_Menu, Me.About_Tool})
         Me.Menu_Strip.Location = New System.Drawing.Point(0, 0)
         Me.Menu_Strip.Name = "Menu_Strip"
-        Me.Menu_Strip.Size = New System.Drawing.Size(1105, 28)
+        Me.Menu_Strip.Size = New System.Drawing.Size(1105, 30)
         Me.Menu_Strip.TabIndex = 1
         Me.Menu_Strip.Text = "MenuStrip1"
         '
@@ -54,7 +54,7 @@ Partial Class Main_Form
         '
         Me.File_Menu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.File_Open, Me.SaveToolStripMenuItem})
         Me.File_Menu.Name = "File_Menu"
-        Me.File_Menu.Size = New System.Drawing.Size(46, 24)
+        Me.File_Menu.Size = New System.Drawing.Size(46, 26)
         Me.File_Menu.Text = "File"
         '
         'File_Open
@@ -72,7 +72,7 @@ Partial Class Main_Form
         'About_Tool
         '
         Me.About_Tool.Name = "About_Tool"
-        Me.About_Tool.Size = New System.Drawing.Size(64, 24)
+        Me.About_Tool.Size = New System.Drawing.Size(64, 26)
         Me.About_Tool.Text = "About"
         '
         'Open_File
@@ -88,7 +88,7 @@ Partial Class Main_Form
         Me.ROM_Offset.Name = "ROM_Offset"
         Me.ROM_Offset.Size = New System.Drawing.Size(193, 39)
         Me.ROM_Offset.TabIndex = 5
-        Me.ROM_Offset.Text = "18C66"
+        Me.ROM_Offset.Text = "14F9C"
         Me.ROM_Offset.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Number_Frames
@@ -99,7 +99,7 @@ Partial Class Main_Form
         Me.Number_Frames.Name = "Number_Frames"
         Me.Number_Frames.Size = New System.Drawing.Size(83, 39)
         Me.Number_Frames.TabIndex = 8
-        Me.Number_Frames.Text = "13"
+        Me.Number_Frames.Text = "9"
         Me.Number_Frames.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label_Name
@@ -110,7 +110,7 @@ Partial Class Main_Form
         Me.Label_Name.Name = "Label_Name"
         Me.Label_Name.Size = New System.Drawing.Size(681, 39)
         Me.Label_Name.TabIndex = 10
-        Me.Label_Name.Text = "Scratch_Intro"
+        Me.Label_Name.Text = "Sprites_Puyo_Red"
         Me.Label_Name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label4
@@ -181,7 +181,7 @@ Partial Class Main_Form
         Me.MaximizeBox = False
         Me.Name = "Main_Form"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Puyo Puyo 1 / Mean Bean Machine - Extract Sprite Mappings (V1.0)"
+        Me.Text = "Puyo Puyo 1 / Mean Bean Machine - Extract Sprite Mappings (V1.1)"
         Me.Menu_Strip.ResumeLayout(False)
         Me.Menu_Strip.PerformLayout()
         Me.ResumeLayout(False)
