@@ -46,7 +46,7 @@ Partial Class Main_Form
         Me.Menu_Strip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.File_Menu, Me.About_Tool})
         Me.Menu_Strip.Location = New System.Drawing.Point(0, 0)
         Me.Menu_Strip.Name = "Menu_Strip"
-        Me.Menu_Strip.Size = New System.Drawing.Size(1105, 30)
+        Me.Menu_Strip.Size = New System.Drawing.Size(1105, 28)
         Me.Menu_Strip.TabIndex = 1
         Me.Menu_Strip.Text = "MenuStrip1"
         '
@@ -54,7 +54,7 @@ Partial Class Main_Form
         '
         Me.File_Menu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.File_Open, Me.SaveToolStripMenuItem})
         Me.File_Menu.Name = "File_Menu"
-        Me.File_Menu.Size = New System.Drawing.Size(46, 26)
+        Me.File_Menu.Size = New System.Drawing.Size(46, 24)
         Me.File_Menu.Text = "File"
         '
         'File_Open
@@ -72,7 +72,7 @@ Partial Class Main_Form
         'About_Tool
         '
         Me.About_Tool.Name = "About_Tool"
-        Me.About_Tool.Size = New System.Drawing.Size(64, 26)
+        Me.About_Tool.Size = New System.Drawing.Size(64, 24)
         Me.About_Tool.Text = "About"
         '
         'Open_File
@@ -110,7 +110,7 @@ Partial Class Main_Form
         Me.Label_Name.Name = "Label_Name"
         Me.Label_Name.Size = New System.Drawing.Size(681, 39)
         Me.Label_Name.TabIndex = 10
-        Me.Label_Name.Text = "Sprites_Puyo_Red"
+        Me.Label_Name.Text = "Sprite_Puyo_Red"
         Me.Label_Name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label4
@@ -181,7 +181,7 @@ Partial Class Main_Form
         Me.MaximizeBox = False
         Me.Name = "Main_Form"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Puyo Puyo 1 / Mean Bean Machine - Extract Sprite Mappings (V1.1)"
+        Me.Text = "Puyo Puyo 1 / Mean Bean Machine - Extract Sprite Mappings (V1.2)"
         Me.Menu_Strip.ResumeLayout(False)
         Me.Menu_Strip.PerformLayout()
         Me.ResumeLayout(False)

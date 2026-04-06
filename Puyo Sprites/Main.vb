@@ -173,13 +173,13 @@
                             Vert_Pos_Text = "-" & Vert_Pos
                         End If
 
-                        Hori_Pos_Neg = Attribute_Section(1) And &B1111111100000000
+                        Hori_Pos_Neg = Attribute_Section(4) And &B1111111100000000
                         If Hori_Pos_Neg = 0 Then
-                            Hori_Pos = Attribute_Section(1)
+                            Hori_Pos = Attribute_Section(4)
                             Hori_Pos = Hori_Pos And &B11111111
                             Hori_Pos_Text = Hori_Pos
                         Else
-                            Hori_Pos = Attribute_Section(1)
+                            Hori_Pos = Attribute_Section(4)
                             Hori_Pos = Hori_Pos And &B11111111
                             Hori_Pos = &HFF - Hori_Pos + 1
                             Hori_Pos_Text = "-" & Hori_Pos
@@ -261,7 +261,7 @@
 
     Private Sub About_Tool_Click(sender As Object, e As EventArgs) Handles About_Tool.Click
 
-        MessageBox.Show("Puyo Puyo 1 / Mean Bean Machine - Extract Sprite Mappings (V1.1)" & vbNewLine & "by RadioTails", "About")
+        MessageBox.Show("Puyo Puyo 1 / Mean Bean Machine - Extract Sprite Mappings (V1.2)" & vbNewLine & "by RadioTails", "About")
 
     End Sub
 
