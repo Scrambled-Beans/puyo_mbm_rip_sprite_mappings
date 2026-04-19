@@ -181,7 +181,7 @@ Partial Class Main_Form
         Me.MaximizeBox = False
         Me.Name = "Main_Form"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Puyo Puyo 1 / Mean Bean Machine - Extract Sprite Mappings (V1.2)"
+        Me.Text = "Puyo Puyo 1 / Mean Bean Machine - Extract Sprite Mappings (V1.3)"
         Me.Menu_Strip.ResumeLayout(False)
         Me.Menu_Strip.PerformLayout()
         Me.ResumeLayout(False)

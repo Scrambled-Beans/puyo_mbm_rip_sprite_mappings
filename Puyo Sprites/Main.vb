@@ -35,8 +35,6 @@
     Public Vert_Rev As UShort
     Public Tile_ID As UShort
 
-
-
     Private Sub File_Open_Click(sender As Object, e As EventArgs) Handles File_Open.Click
         If Open_File.ShowDialog <> DialogResult.Cancel Then ' Opens dialogue box | Exit code if Cancel is pressed
             Try ' Any errors, run error code
@@ -72,9 +70,18 @@
                     Offset_Frame(Add_Number) = Long_Byte_Full
                     Label_Frame(Add_Number) = Label_Name.Text & "_" & Add_Number - 1
 
-                    Text_Output.Text +=
-                        vbTab & "mappingsTableEntry.l" & vbTab & Label_Frame(Add_Number) &
-                        vbCrLf
+                    If Offset_Frame(Add_Number) = 0 Then
+                        Text_Output.Text +=
+                            vbTab & "mappingsTableEntry.l" & vbTab & "0" &
+                            vbCrLf
+
+                    Else
+
+                        Text_Output.Text +=
+                            vbTab & "mappingsTableEntry.l" & vbTab & Label_Frame(Add_Number) &
+                            vbCrLf
+
+                    End If
 
                     Offset_Address += 4
 
@@ -93,6 +100,10 @@
                     Add_Number_2 += 1
 
                     Offset_Address = Offset_Frame(Add_Number_2)
+
+                    If Offset_Frame(Add_Number_2) = 0 Then
+                        GoTo NoSpriteData
+                    End If
 
                     FileGet(1, Word_Byte_1, Offset_Address + 1)
                     FileGet(1, Word_Byte_2, Offset_Address + 2)
@@ -241,6 +252,8 @@
                     "; ---------------------------------------------------------------------------" &
                     vbCrLf & vbCrLf
 
+NoSpriteData:
+
                     Add_Number = 0
 
                 Loop Until Add_Number_2 = Frames_Number
@@ -261,7 +274,7 @@
 
     Private Sub About_Tool_Click(sender As Object, e As EventArgs) Handles About_Tool.Click
 
-        MessageBox.Show("Puyo Puyo 1 / Mean Bean Machine - Extract Sprite Mappings (V1.2)" & vbNewLine & "by RadioTails", "About")
+        MessageBox.Show("Puyo Puyo 1 / Mean Bean Machine - Extract Sprite Mappings (V1.3)" & vbNewLine & "by RadioTails", "About")
 
     End Sub
 
@@ -272,4 +285,5 @@
             Text_Output.SaveFile(Save_Text_Dialog.FileName, RichTextBoxStreamType.PlainText)
         End If
     End Sub
+
 End Class
