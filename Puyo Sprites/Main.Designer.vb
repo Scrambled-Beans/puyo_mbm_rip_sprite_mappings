@@ -110,7 +110,7 @@ Partial Class Main_Form
         Me.Label_Name.Name = "Label_Name"
         Me.Label_Name.Size = New System.Drawing.Size(681, 39)
         Me.Label_Name.TabIndex = 10
-        Me.Label_Name.Text = "Sprite_Puyo_Red"
+        Me.Label_Name.Text = "Puyo_Red"
         Me.Label_Name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label4
@@ -181,7 +181,7 @@ Partial Class Main_Form
         Me.MaximizeBox = False
         Me.Name = "Main_Form"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Puyo Puyo 1 / Mean Bean Machine - Extract Sprite Mappings (V1.3)"
+        Me.Text = "Puyo Puyo 1 / Mean Bean Machine - Extract Sprite Mappings (v1.4)"
         Me.Menu_Strip.ResumeLayout(False)
         Me.Menu_Strip.PerformLayout()
         Me.ResumeLayout(False)

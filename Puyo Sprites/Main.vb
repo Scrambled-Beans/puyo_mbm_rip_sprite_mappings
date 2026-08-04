@@ -48,7 +48,7 @@
                 Label_Frame(0) = Label_Name.Text
 
                 Text_Output.Text +=
-                    Label_Frame(0) & ":" & "    mappingsTable" &
+                    "Sprite_" & Label_Frame(0) & ":" & "    mappingsTable" &
                     vbCrLf & vbCrLf
 
                 Add_Number = 0
@@ -73,13 +73,14 @@
                     If Offset_Frame(Add_Number) = 0 Then
                         Text_Output.Text +=
                             vbTab & "mappingsTableEntry.l" & vbTab & "0" &
-                            vbCrLf
+                            vbCrLf & vbCrLf
 
                     Else
 
                         Text_Output.Text +=
-                            vbTab & "mappingsTableEntry.l" & vbTab & Label_Frame(Add_Number) &
-                            vbCrLf
+                            "Label_" & Label_Frame(Add_Number) & ":" & vbCrLf &
+                            vbTab & "mappingsTableEntry.l" & vbTab & "Sprite_" & Label_Frame(Add_Number) &
+                            vbCrLf & vbCrLf
 
                     End If
 
@@ -88,7 +89,6 @@
                 Loop Until Add_Number = Frames_Number
 
                 Text_Output.Text +=
-                    vbCrLf &
                     "; ---------------------------------------------------------------------------" &
                     vbCrLf & vbCrLf
 
@@ -116,7 +116,7 @@
 
 
                     Text_Output.Text +=
-                        Label_Frame(Add_Number_2) & ":" & vbTab & "spriteHeader" & vbCrLf & vbCrLf &
+                        "Sprite_" & Label_Frame(Add_Number_2) & ":" & vbTab & "spriteHeader" & vbCrLf & vbCrLf &
                         vbTab & "; X, Y, Width, Height, Tile, X Flip, Y Flip, Palette, Priority, Link" &
                         vbCrLf & vbCrLf
 
@@ -247,7 +247,7 @@
 
                     Text_Output.Text +=
                     vbCrLf &
-                    Label_Frame(Add_Number_2) & "_End" &
+                    "Sprite_" & Label_Frame(Add_Number_2) & "_End" &
                     vbCrLf & vbCrLf &
                     "; ---------------------------------------------------------------------------" &
                     vbCrLf & vbCrLf
@@ -274,7 +274,7 @@ NoSpriteData:
 
     Private Sub About_Tool_Click(sender As Object, e As EventArgs) Handles About_Tool.Click
 
-        MessageBox.Show("Puyo Puyo 1 / Mean Bean Machine - Extract Sprite Mappings (V1.3)" & vbNewLine & "by RadioTails", "About")
+        MessageBox.Show("Puyo Puyo 1 / Mean Bean Machine - Extract Sprite Mappings (v1.4)" & vbNewLine & "by RadioTails", "About")
 
     End Sub
 
