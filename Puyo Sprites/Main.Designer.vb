@@ -78,7 +78,7 @@ Partial Class Main_Form
         'Open_File
         '
         Me.Open_File.FileName = "Open_File"
-        Me.Open_File.Filter = "BIN|*.bin|MD|*.md"
+        Me.Open_File.Filter = "BIN|*.bin|MD|*.md|GEN|*.gen|68K|*.68K|SGD|*.SGD"
         '
         'ROM_Offset
         '
@@ -95,9 +95,9 @@ Partial Class Main_Form
         '
         Me.Number_Frames.Font = New System.Drawing.Font("Consolas", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Number_Frames.Location = New System.Drawing.Point(409, 82)
-        Me.Number_Frames.MaxLength = 2
+        Me.Number_Frames.MaxLength = 3
         Me.Number_Frames.Name = "Number_Frames"
-        Me.Number_Frames.Size = New System.Drawing.Size(83, 39)
+        Me.Number_Frames.Size = New System.Drawing.Size(116, 39)
         Me.Number_Frames.TabIndex = 8
         Me.Number_Frames.Text = "9"
         Me.Number_Frames.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -181,7 +181,7 @@ Partial Class Main_Form
         Me.MaximizeBox = False
         Me.Name = "Main_Form"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Puyo Puyo 1 / Mean Bean Machine - Extract Sprite Mappings (v1.4)"
+        Me.Text = "Puyo Puyo 1 / Mean Bean Machine - Extract Sprite Mappings (v1.5)"
         Me.Menu_Strip.ResumeLayout(False)
         Me.Menu_Strip.PerformLayout()
         Me.ResumeLayout(False)

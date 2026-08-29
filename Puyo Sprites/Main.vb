@@ -47,9 +47,25 @@
                 Frames_Number = Number_Frames.Text
                 Label_Frame(0) = Label_Name.Text
 
+                Add_Number = 0
+                Add_Number_2 = 0
+
+                Do
+                    Add_Number += 1
+
+                    Text_Output.Text +=
+                        "Sprite_" & Label_Name.Text & ":" & vbTab & "Equ " & Add_Number_2 &
+                        vbCrLf
+
+                    Add_Number_2 += 1
+                Loop Until Add_Number = Frames_Number
+
                 Text_Output.Text +=
-                    "Sprite_" & Label_Frame(0) & ":" & "    mappingsTable" &
-                    vbCrLf & vbCrLf
+                    vbCrLf &
+                    "; ---------------------------------------------------------------------------" &
+                    vbCrLf & vbCrLf &
+                    "Sprites_" & Label_Frame(0) & ":" & vbTab & "mappingsTable" &
+                    vbCrLf
 
                 Add_Number = 0
 
@@ -73,14 +89,13 @@
                     If Offset_Frame(Add_Number) = 0 Then
                         Text_Output.Text +=
                             vbTab & "mappingsTableEntry.l" & vbTab & "0" &
-                            vbCrLf & vbCrLf
+                            vbCrLf
 
                     Else
 
                         Text_Output.Text +=
-                            "Label_" & Label_Frame(Add_Number) & ":" & vbCrLf &
-                            vbTab & "mappingsTableEntry.l" & vbTab & "Sprite_" & Label_Frame(Add_Number) &
-                            vbCrLf & vbCrLf
+                            vbTab & "mappingsTableEntry.l" & vbTab & Label_Frame(Add_Number) &
+                            vbCrLf
 
                     End If
 
@@ -89,6 +104,7 @@
                 Loop Until Add_Number = Frames_Number
 
                 Text_Output.Text +=
+                    vbCrLf &
                     "; ---------------------------------------------------------------------------" &
                     vbCrLf & vbCrLf
 
@@ -116,9 +132,9 @@
 
 
                     Text_Output.Text +=
-                        "Sprite_" & Label_Frame(Add_Number_2) & ":" & vbTab & "spriteHeader" & vbCrLf & vbCrLf &
+                        Label_Frame(Add_Number_2) & ":" & vbTab & "spriteHeader" & vbCrLf &
                         vbTab & "; X, Y, Width, Height, Tile, X Flip, Y Flip, Palette, Priority, Link" &
-                        vbCrLf & vbCrLf
+                        vbCrLf
 
                     Do
                         Add_Number += 1
@@ -246,8 +262,7 @@
                     Loop Until Add_Number = Num_Sprites
 
                     Text_Output.Text +=
-                    vbCrLf &
-                    "Sprite_" & Label_Frame(Add_Number_2) & "_End" &
+                    Label_Frame(Add_Number_2) & "_End" &
                     vbCrLf & vbCrLf &
                     "; ---------------------------------------------------------------------------" &
                     vbCrLf & vbCrLf
@@ -274,7 +289,7 @@ NoSpriteData:
 
     Private Sub About_Tool_Click(sender As Object, e As EventArgs) Handles About_Tool.Click
 
-        MessageBox.Show("Puyo Puyo 1 / Mean Bean Machine - Extract Sprite Mappings (v1.4)" & vbNewLine & "by RadioTails", "About")
+        MessageBox.Show("Puyo Puyo 1 / Mean Bean Machine - Extract Sprite Mappings (v1.5)" & vbNewLine & "by RadioTails", "About")
 
     End Sub
 
