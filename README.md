@@ -1,1 +1,1 @@
-![image_alt](https://github.com/Scrambled-Beans/puyo_mbm_rip_sprite_mappings/blob/b8f948bcd45557c01fa297d1045f4d265902271a/Screenshot.png)
+![image_alt](https://github.com/Scrambled-Beans/puyo_mbm_rip_sprite_mappings/blob/c243246a899595f62b830c726ce74823de556a06/Screenshot.png)

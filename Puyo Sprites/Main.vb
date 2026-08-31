@@ -1,5 +1,6 @@
 ﻿Public Class Main_Form
 
+#Region " Variables "
     Public Add_Number As Long
     Public Add_Number_2 As Long
 
@@ -35,6 +36,18 @@
     Public Vert_Rev As UShort
     Public Tile_ID As UShort
 
+    Public Version_Text As String = "Version: 1.6"
+    Public Title_Text As String = "Puyo Puyo 1 / Mean Bean Machine - Extract Sprite Mappings"
+    Public Creator_Text As String = "By RadioTails"
+#End Region
+
+#Region " Load Form "
+    Private Sub Main_Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Text = Title_Text
+    End Sub
+#End Region
+
+#Region " Open File "
     Private Sub File_Open_Click(sender As Object, e As EventArgs) Handles File_Open.Click
         If Open_File.ShowDialog <> DialogResult.Cancel Then ' Opens dialogue box | Exit code if Cancel is pressed
             Try ' Any errors, run error code
@@ -54,7 +67,7 @@
                     Add_Number += 1
 
                     Text_Output.Text +=
-                        "Sprite_" & Label_Name.Text & ":" & vbTab & "Equ " & Add_Number_2 &
+                        "Sprite_" & Label_Name.Text & "_" & Add_Number_2 & ":" & vbTab & "Equ " & Add_Number_2 &
                         vbCrLf
 
                     Add_Number_2 += 1
@@ -286,13 +299,9 @@ NoSpriteData:
             End Try
         End If
     End Sub
+#End Region
 
-    Private Sub About_Tool_Click(sender As Object, e As EventArgs) Handles About_Tool.Click
-
-        MessageBox.Show("Puyo Puyo 1 / Mean Bean Machine - Extract Sprite Mappings (v1.5)" & vbNewLine & "by RadioTails", "About")
-
-    End Sub
-
+#Region " Save File "
     Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
         If (Save_Text_Dialog.ShowDialog() = System.Windows.Forms.DialogResult.OK) And (Save_Text_Dialog.FileName.Length) > 0 Then
 
@@ -300,5 +309,13 @@ NoSpriteData:
             Text_Output.SaveFile(Save_Text_Dialog.FileName, RichTextBoxStreamType.PlainText)
         End If
     End Sub
+#End Region
 
+#Region " About "
+    Private Sub About_Tool_Click(sender As Object, e As EventArgs) Handles About_Tool.Click
+
+        MessageBox.Show(Title_Text & vbNewLine & vbNewLine & Version_Text & vbNewLine & vbNewLine & Creator_Text, "About", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+    End Sub
+#End Region
 End Class
