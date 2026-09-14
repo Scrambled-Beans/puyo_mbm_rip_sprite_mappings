@@ -14,8 +14,8 @@
     Public Long_Byte_Full As UInteger
 
     Public Frames_Number As Byte
-    Public Offset_Frame(99) As UInteger
-    Public Label_Frame(99) As String
+    Public Offset_Frame(999) As UInteger
+    Public Label_Frame(999) As String
 
     Public Num_Sprites As UShort
     Public Attribute_Section(4) As UShort
@@ -36,7 +36,7 @@
     Public Vert_Rev As UShort
     Public Tile_ID As UShort
 
-    Public Version_Text As String = "Version: 1.6"
+    Public Version_Text As String = "Version: 1.7"
     Public Title_Text As String = "Puyo Puyo 1 / Mean Bean Machine - Extract Sprite Mappings"
     Public Creator_Text As String = "By RadioTails"
 #End Region
@@ -77,7 +77,7 @@
                     vbCrLf &
                     "; ---------------------------------------------------------------------------" &
                     vbCrLf & vbCrLf &
-                    "Sprites_" & Label_Frame(0) & ":" & vbTab & "mappingsTable" &
+                    "ListSprites_" & Label_Frame(0) & ":" & vbTab & "mappingsTable" &
                     vbCrLf
 
                 Add_Number = 0
